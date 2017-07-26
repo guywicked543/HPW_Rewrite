@@ -23,7 +23,7 @@ function Spell:OnFire(wand)
 		local vec = self.Owner:GetAimVector() * 600
 
 		if ent:IsPlayer() or ent:IsNPC() then
-			ent:SetVelocity(vec)
+			ent:SetVelocity(70,0,0)
 		else
 			local phys = ent:GetPhysicsObject()
 			if IsValid(phys) then phys:SetVelocity(vec) end
@@ -31,4 +31,4 @@ function Spell:OnFire(wand)
 	end
 end
 
-HpwRewrite:AddSpell("Speedavec", Spell)
+HpwRewrite:AddSpell("Speedavec1.0", Spell)
